@@ -36,6 +36,10 @@
             grid-template-rows: auto 1fr auto;
             width: 300px;
         } 
+        .form-container div{
+            display: flex;
+            flex-direction: column;
+        }
         .logo{
             width: 200px;
             margin-bottom: 60px;
@@ -103,10 +107,8 @@
             .logo{
                 display: block;
             }
-            .signup-button{
-                position: absolute;
-                width: inherit;
-                bottom: 20px;
+            .form-container div {
+                justify-content: space-between;
             }
          }
 
@@ -115,18 +117,23 @@
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <div>
+                <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
            
-            <form action="/" class="form">
-                <label for="email" class="label">Email address</label>
-                <input id="email" type="text" placeholder="platzi@example.com" class="input input-email">
+                <form action="/" class="form">
                 
-                <label for="password" class="label">Password</label>
-                <input id="password" type="password" placeholder="*********" class="input input-password">
+                    <label for="email" class="label">Email address</label>
+                    <input id="email" type="text" placeholder="platzi@example.com" class="input input-email">
+                    
+                    <label for="password" class="label">Password</label>
+                    <input id="password" type="password" placeholder="*********" class="input input-password">
 
-                <input type="submit" value="Log in" class="primary-button login-button">
-                <a href="/">Forgot my password</a>
-            </form>
+                    <input type="submit" value="Log in" class="primary-button login-button">
+                    <a href="/">Forgot my password</a>
+                </form>
+
+            </div>
+            
             <button class="secondary-button signup-button">Sign up</button>
         </div> 
     </div>
